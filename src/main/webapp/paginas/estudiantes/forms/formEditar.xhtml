@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+      <script type="text/javascript">
+
+PrimeFaces.locales['pt'] = {
+     closeText: 'Cerrar',
+     prevText: 'Anterior',
+     nextText: 'Siguiente',
+     currentText: 'Inicio',
+     monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+     monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun', 'Jul','Ago','Sep','Oct','Nov','Dic'],
+     dayNames: ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],
+     dayNamesShort: ['Dom','Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+     dayNamesMin: ['D','L','M','M','J','V','S'],
+     weekHeader: 'Semana',
+     firstDay: 1,
+     isRTL: false,
+     showMonthAfterYear: false,
+     yearSuffix: '',
+     timeOnlyTitle: 'Sólo hora',
+     timeText: 'Tempo',
+     hourText: 'Hora',
+     minuteText: 'Minuto',
+     secondText: 'Segundo',
+     ampm: false,
+     month: 'Mes',
+     week: 'Semana',
+     day: 'Dia',
+     allDayText : 'Todo Dia'
+ };
+ 
+
+ 
+</script>
+        <style type="text/css">
+        	.btt1{
+                width:17px;
+               
+            }
+            .btt1:hover {
+                 
+                opacity:0.5;       
+                         
+            }           
+        </style>
+    </h:head>
+
+<h:body >  
+
+ 	  <h:form id="formr"> 
+  
+  <p:growl id="messages" showDetail="true"/>  
+  <p:messages id="messages1" showDetail="true" autoUpdate="true" closable="true" /> 
+  <p:panel id="panela" header="Datos de Persona " style="width:940px; color:#006699; border-color:#006699;"  toggleable="true" closable="false" toggleSpeed="500" widgetVar="panela">                
+                <h:messages errorClass="error"/>                    
+                <center>
+   		<p:panelGrid style="margin-bottom:1px; margin-left:2px; width:920px; padding:1px; " > 
+  						
+        				
+  						<p:row>        
+  						             				
+            				<p:column     colspan="1" style="text-align: left; border-color:white; 1width:150px ; font-family: Arial; font-size: 13px; font-weight:bold;" >          
+								<h:outputLabel value="C.I. *:" style="color:#006699; "/>
+								<p:inputMask value="#{estudianteBean.registro.ci}" mask="9999999"/> 
+            				</p:column>  
+            				
+            				<p:column     colspan="2" style="text-align: left; border-color:white; 1width:150px ; font-family: Arial; font-size: 13px; font-weight:bold;" >          
+								<h:outputLabel value="Nombre *" style="color:#006699; "/>
+								<p:inputText  id="aae" value="#{estudianteBean.registro.nombre}" style="margin-left:1px; font-weight:none; width:99%" /> 
+								
+								
+	    						
+            				</p:column>  
+            				<p:column     colspan="2" style="text-align: left; border-color:white; 1width:150px ; font-family: Arial; font-size: 13px; font-weight:bold;" >          
+								<h:outputLabel value="Paterno *" style="color:#006699; "/>
+								<p:inputText  value="#{estudianteBean.registro.paterno}" style="margin-left:1px; font-weight:none; width:99%" /> 
+            				</p:column>  
+            				<p:column     colspan="3" style="text-align: left; border-color:white; 1width:150px ; font-family: Arial; font-size: 13px; font-weight:bold;" >          
+								<h:outputLabel value="Materno" style="color:#006699; "/>
+								<p:inputText  value="#{estudianteBean.registro.materno}" style="margin-left:1px; font-weight:none; width:99%" /> 
+            				</p:column> 
+            				             				             				     
+            			<!--  verificar qeui -->	             				             				
+            				
+            				
+            				       				             				     
+        				</p:row> 
+        				
+        				
+        				<p:row>  
+            				<p:column    style="border-color:white; width:100px ;  font-family: Arial; font-size: 13px;" >                   					         											    		
+            				</p:column>  
+            				<p:column    style="border-color:white; width:150px ; font-family: Arial; font-size: 12px;" >  								
+            				</p:column>   
+            				<p:column    style="border-color:white; width:120px ;  font-family: Arial; font-size: 13px;" >               					          											    		
+            				</p:column>  
+            				<p:column    style=" border-color:white; width:120px ;  font-family: Arial;  font-size: 14px;" >  								
+            				</p:column>  
+            				<p:column    style="border-color:white;width:120px ;   font-family: Arial; font-size: 13px;" >                 					          											    		
+            				</p:column>  
+            				<p:column    style="border-color:white; width:120px ;  font-family: Arial;   font-size: 14px;" >  								
+            				</p:column> 
+            				<p:column    style="border-color:white;width:120px ;   font-family: Arial; font-size: 13px;" >               					          											    		
+            				</p:column>  
+            				<p:column    style=" border-color:white; width:120px ;  font-family: Arial;   font-size: 14px;" >  								
+            				</p:column>                        
+        				</p:row>       
+        						
+					</p:panelGrid> 
+					</center>     
+					
+					     
+            </p:panel>   
+          
+            
+      
+                 
+                            
+                          
+    
+    <p:panel id="bby" style="width:920px; height:50px;border-color:white;"  >                                        
+    <p:commandButton value="Cancelar"   actionListener="#{personaBean.buscar}" icon="ui-icon-close" style="float:right; margin-left:20px;"/>         
+ <p:commandButton value="Guardar"  update=":formr:confirmDialog" oncomplete="confirmation.show()" icon="ui-icon-disk" style="float:right;"/>   
+       
+     </p:panel>     
+     
+     <p:confirmDialog id="confirmDialog" message="Desea Guardar el registro?"  
+                header="Guradar Registro" severity="alert" widgetVar="confirmation">                  
+        <p:commandButton id="confirm" value="Si"  oncomplete="confirmation.hide()"  
+                    actionListener="#{personaBean.update}" />  
+        <p:commandButton id="decline" value="No" onclick="confirmation.hide()" type="button" />                    
+     </p:confirmDialog> 
+</h:form>       
+	  
+</h:body>
+</html>

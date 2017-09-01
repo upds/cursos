@@ -18,5 +18,11 @@
 		<managed-bean-scope>session</managed-bean-scope>	
 				
 	</managed-bean>  
+	<managed-bean>
+		<managed-bean-name>estudianteBean</managed-bean-name>
+		<managed-bean-class>org.keije.com.view.EstudianteBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>	
+				
+	</managed-bean>  
 	 
 </faces-config>

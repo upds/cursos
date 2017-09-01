@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <style type="text/css">
+        	.btt1{
+                width:17px;
+               
+            }
+            .btt1:hover {
+                 
+                opacity:0.5;       
+                         
+            }           
+        </style>
+    </h:head>
+
+<h:body >  
+
+ 	<h:form id="formb">   		
+     <p:growl id="growl" showDetail="true"/> 	
+  
+  		<p:dataTable id="lista1" var="esp" value="#{estudianteBean.registros}" widgetVar="carsTable"  filteredValue="#{personaBean.registrosFiltrado}"  
+            				emptyMessage="Tabla Vacia"             
+            				paginator="true" rows="99999" style="width:100%;">        	        
+        	<f:facet name="header">  
+            BUSCAR ESTUDIANTE 
+        	</f:facet>
+            <p:column  headerText="Nombre" filterBy="#{esp.nombre}" style="font-size: 13px;  1text-align:center; width:100px;">  
+                <h:outputText value="#{esp.nombre}" style="font-size: 13px;1text-align:left;" />                  
+            </p:column>
+        	 <p:column  headerText="Paterno" filterBy="#{esp.paterno}" style="font-size: 13px;  1text-align:center; width:100px;">  
+                <h:outputText value="#{esp.paterno}" style="font-size: 13px; 1font-weight: bold; 1text-align:left;" />                  
+            </p:column>	 
+             <p:column  headerText="Materno" filterBy="#{esp.materno}" style="font-size: 13px;  1text-align:center; width:100px;">  
+                <h:outputText value="#{esp.materno}" style="font-size: 13px; 1font-weight: bold; 1text-align:left;" />                  
+            </p:column>	                     
+             <p:column  headerText="ci" filterBy="#{esp.ci}" style="font-size: 13px;  1text-align:center; width:300px;">  
+                <h:outputText value="#{esp.ci}" style="font-size: 13px; 1font-weight: bold; 1text-align:left;" />                  
+            </p:column>	
+        
+                    <p:column headerText="Opc." style="width:50px;">     						
+	    						<p:commandLink   id="cuodd"  style="margin-right:10px;" title=""  disabled="false">			 
+									<h:graphicImage styleClass="btt1"  value="/images/edit16.jpg"/> 	
+									<f:setPropertyActionListener value="editar" target="#{estudianteBean.accion}" />									
+									<f:setPropertyActionListener value="#{esp}" target="#{estudianteBean.selectedRegistro}" />							 							
+	    						</p:commandLink>	 
+	    						
+	    						<p:commandLink   id="cuodds" update=":formb:confirmDialog" oncomplete="confirmation.show()" style="margin-right:1px;" title=""  disabled="false">			 
+									<h:graphicImage styleClass="btt1"  value="/images/del16.jpg"/> 	
+										<f:setPropertyActionListener value="eliminar" target="#{estudianteBean.accion}" />
+									<f:setPropertyActionListener value="#{esp}" target="#{estudianteBean.selectedRegistro}" />							 							
+	    						</p:commandLink>   						
+        </p:column>      
+    	</p:dataTable>
+ 
+	 <p:confirmDialog id="confirmDialog" message="Desea Eliminar el registro?"  
+                header="Eliminar Registro" severity="alert" widgetVar="confirmation">                  
+        <p:commandButton id="confirm" value="Si"  oncomplete="confirmation.hide()"  
+                    actionListener="#{estudianteBean.delete}" />  
+        <p:commandButton id="decline" value="No" onclick="confirmation.hide()" type="button" />                    
+     </p:confirmDialog> 
+    
+      </h:form> 
+ 	
+	  
+</h:body>
+</html>

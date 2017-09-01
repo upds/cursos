@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+    <script type="text/javascript">
+PrimeFaces.locales['es'] = {
+                closeText: 'Cerrar',
+                prevText: 'Anterior',
+                nextText: 'Siguiente',
+                currentText: 'Inicio',
+                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                monthNamesShort: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                dayNames: ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],
+                dayNamesShort: ['Dom','Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+                dayNamesMin: ['D','L','M','M','J','V','S'],
+                weekHeader: 'Semana',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: '',
+                timeOnlyTitle: 'Sólo hora',
+                timeText: 'Tempo',
+                hourText: 'Hora',
+                minuteText: 'Minuto',
+                secondText: 'Segundo',
+                currentText: 'Fecha actual',
+                ampm: false,
+                month: 'Mes',
+                week: 'Semana',
+                day: 'Día',
+                allDayText : 'Todo el día'
+            };
+</script>
+        <style type="text/css">
+        	.btt{
+                width:19px;
+               
+            }
+            .btt:hover {
+                 width:22px;
+                opacity:0.4;   
+                
+                1transform:rotateZ(360deg) ;              
+            }  
+            .upds {
+            width:100px;
+                 
+                             
+            }     
+            .upds:hover {
+                 
+                transition:all 2.7s;
+                transform:rotateZ(720deg) ;  
+                cursor: pointer;            
+            }           
+        </style>
+        
+        <style type="text/css">
+            .label {
+                width:20%;
+                padding:4px;
+                text-align:right;
+            }
+
+            .value {
+                width:90%;
+                padding:4px;
+            }
+
+            .grid {
+                width:100%;
+            }
+
+            .error {
+                color: red;
+            }
+
+            .outputLabel {
+                font-weight: none;
+            }
+            .mediano{
+            width:28%;
+            }
+            .grande{
+            width:60%;
+            }
+
+            .grid {
+                width:90%;
+                padding:4px;
+            }
+        </style>
+    </h:head>
+
+<h:body >  
+<h:form id="form1"> 
+
+		<p:panelGrid style="margin-top:1px; margin-bottom:15px;  width:100%; border-top-right-radius:10px; font-weight:bold;
+	border-top-left-radius:10px; " > 		
+    		
+			<p:row> 
+            	<p:column>  
+            	   
+            	     
+					<p:panelGrid style=" border-radius:8px;   margin-top:0px ; width:280px"  cellpadding="1 "> 						 
+           				<p:row>  
+            				<p:column colspan="2"  style="text-align: left; font-size:13px;border-radius:8px;" >          
+              					 GESTION DE PERSONAS				    		
+            				</p:column>                        
+        				</p:row>    
+        				
+           				<p:row  style="border-color:white;  ">  
+           				
+            				<p:column rowspan="2" style="font-size: 16px; font-weight: bold; text-align: left;  width:64px; border-radius:8px; "  > 
+									<h:graphicImage  value="/images/proveedor3.png" style="width:80px;"/>
+            				</p:column>  
+            				<p:column   style="text-align: left;border-radius:8px; " >          
+              					<p:commandLink   id="registrar" actionListener="#{personaBean.registro}" disabled="false" style=" margin-left:2px;  margin-right:6px; text-decoration: none;"  title="Registrar">
+									<h:graphicImage styleClass="btt"  value="/images/add16.jpg" style="" /> 
+	    						</p:commandLink> 
+	    						<p:commandLink   id="grupos"  actionListener="#{personaBean.buscar}" disabled="false" style="margin-right:6px; text-decoration: none;" ajax="true" title="Buscar">
+									<h:graphicImage styleClass="btt" value="/images/buscar16.jpg" style=""/>
+	    						</p:commandLink> 
+	    						
+	    						
+	    						<p:commandLink   id="cerr"  actionListener="#{menuPrincipalBean.cerrar}" style="margin-right:1px; text-decoration: none;" ajax="true" title="Cerrar">
+									<h:graphicImage styleClass="btt" value="/images/cancel16.jpg" style=""/>
+	    						</p:commandLink>
+	    						
+	    						 	    						    						    								    		
+            				</p:column>              				
+        				</p:row>          
+						<p:row>  
+            				<p:column   style="text-align: left; font-size:14px; border-radius:8px;" >          
+              					PERSONAS							    		
+            				</p:column>                        
+        				</p:row>         				
+					</p:panelGrid>  
+					
+            	</p:column>         
+            	 <p:column  style="width:600px; font-weight:1px;  text-align:justify;  font-size:13px; font-style:Arial Narrow;" >  
+            	 <h:outputText style=" font-weight:1px; font-size:13px; font-style:'Arial Narrow'; text-align:justify;" 
+            	 value="
+A través de este modulo bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla ....         	 " /> 
+            	 	
+            	  </p:column>        	
+            	<p:column  style="border-color:white; width:100px;" >  
+            	<a href="" style="font-size:11px; font-weight:bold; text=align:center; text-decoration: none;" title="VISITAR SITIO WEB">
+				<p:graphicImage value="/images/actividades.png" style=";  border-radius:3px; "/>
+				</a>					
+            	</p:column>                                                      
+        	</p:row>  
+ 		</p:panelGrid>  
+</h:form> 		
+
+
+  
+</h:body>
+</html>

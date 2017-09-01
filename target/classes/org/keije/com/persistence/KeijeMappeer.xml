@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="org.keije.com.persistence.KeijeMapper">
+<cache />  
+
+
+	<!-- *********************************************************** -->  
+	<resultMap id="CursoResult" type="Curso" >  		
+  		<result property="id" column="id"/>  		
+  		<result property="nombre" column="nombre"/>
+  		<result property="tipo" column="tipo"/>    		
+  		<result property="duracion" column="duracion"/>  
+  		<result property="cupo" column="cupo"/> 	
+  		<result property="evaluar" column="evaluar"/> 		
+ 	</resultMap> 
+ 	
+	<select id="getCurso" parameterType="int"  resultMap="CursoResult">
+	 SELECT *
+	 FROM curso
+	 WHERE id=#{value} 
+  	</select>
+  	
+	<select id="getCursos"  resultMap="CursoResult">
+	 SELECT *
+	 FROM curso	
+	 order by nombre asc
+  	</select> 
+  	
+	<!-- el insert no necesita mapear atributos de clase con columnas de tabla  -->
+	<insert id="insertCurso" parameterType="Curso" useGeneratedKeys="true" keyProperty="id">
+	insert into curso (nombre, tipo, duracion, cupo, evaluar)
+	values (#{nombre},#{tipo},#{duracion},#{cupo},#{evaluar})
+	</insert>
+
+</mapper>

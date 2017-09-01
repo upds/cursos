@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<link rel="stylesheet" type="text/css" media="screen"
+		href="#{facesContext.externalContext.request.contextPath}/css/styleKeije.css" />
+	<script type="text/javascript"
+		src="#{facesContext.externalContext.request.contextPath}/js/jsKeije.js"></script>
+
+
+
+	<link
+		href="#{facesContext.externalContext.request.contextPath}/assets/css/bootstrap.css"
+		rel="stylesheet" />
+	<!-- FontAwesome Styles-->
+	<link
+		href="#{facesContext.externalContext.request.contextPath}/assets/css/font-awesome.css"
+		rel="stylesheet" />
+	<!-- Morris Chart Styles-->
+	<link
+		href="#{facesContext.externalContext.request.contextPath}/assets/js/morris/morris-0.4.3.min.css"
+		rel="stylesheet" />
+	<!-- Custom Styles-->
+	<link
+		href="#{facesContext.externalContext.request.contextPath}/assets/css/custom-styles.css"
+		rel="stylesheet" />
+	<!-- Google Fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans'
+		rel='stylesheet' type='text/css' />
+
+
+
+
+
+	<title>Insert title here</title>
+</h:head>
+<h:body>
+	<div id="wrapper" style="background-color: #111111;">
+		<div id="cabecera">
+			<nav class="navbar navbar-default top-navbar" role="navigation"
+				style="background-color:#111111;">
+			<div class="navbar-header"
+				style="height: 80px; background-color: #111111;">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".sidebar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">GESTION DE CURSOS</a>
+			</div>
+
+			<ul class="nav navbar-top-links navbar-right">
+
+				<!-- /.dropdown -->
+
+				<!-- /.dropdown -->
+
+				<!-- /.dropdown -->
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#" aria-expanded="false"> <i
+						class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+				</a>
+					<ul class="dropdown-menu dropdown-user">
+						<li><a href="#"><i class="fa fa-user fa-fw"></i> Usuario</a>
+						</li>
+						<li><a href="#"><i class="fa fa-gear fa-fw"></i>
+								Configuracion</a></li>
+						<li class="divider"></li>
+						<li><a href="#"><i class="fa fa-sign-out fa-fw"></i>
+								Salir</a></li>
+					</ul> <!-- /.dropdown-user --></li>
+				<!-- /.dropdown -->
+			</ul>
+			</nav>
+		</div>
+
+		<!--/. NAV TOP  -->
+
+		<div id="menu">
+			<nav class="navbar-default navbar-side" role="navigation">
+			<div class="sidebar-collapse">
+				<center>
+					<p:menu
+						styleClass="ui-listview-inset ui-corner-all ui-group-theme-b"
+						style="width:100%;">
+						<p:submenu label="Sports">
+							<p:menuitem value="ESPN" url="http://www.espn.com"
+								icon="ui-icon-gear" />
+							<p:menuitem value="NBA" url="http://www.nba.com"
+								icon="ui-icon-delete" />
+						</p:submenu>
+						<p:submenu label="Search">
+							<p:menuitem value="Google" url="http://www.google.com"
+								icon="ui-icon-info" />
+							<p:menuitem value="Bing" url="http://www.bing.com"
+								icon="ui-icon-action" />
+						</p:submenu>
+					</p:menu>
+
+				</center>
+
+
+
+
+			</div>
+
+			</nav>
+		</div>
+
+		<!-- /. NAV SIDE  -->
+		<div id="page-wrapper">
+			<div id="page-inner">
+				<!-- *************************** -->
+				<div class="row" id="cuerpo">
+				<ui:insert name"cuerpo">aqui trabajaremos</ui:insert>
+				
+				</div>
+				<!-- /. ROW  -->
+				<footer>
+				<p>
+					Creado por:<a href="#">KeijeComunity</a>
+				</p>
+				</footer>
+			</div>
+			<!-- /. PAGE INNER  -->
+		</div>
+		<!-- /. PAGE WRAPPER  -->
+	</div>
+	<!-- /. WRAPPER  -->
+	<!-- JS Scripts-->
+	<!-- jQuery Js -->
+	<script
+		src="#{facesContext.externalContext.request.contextPath}/assets/js/jquery-1.10.2.js"></script>
+	<!-- Bootstrap Js -->
+	<script
+		src="#{facesContext.externalContext.request.contextPath}/assets/js/bootstrap.min.js"></script>
+	<!-- Metis Menu Js -->
+	<script
+		src="#{facesContext.externalContext.request.contextPath}/assets/js/jquery.metisMenu.js"></script>
+	<!-- Morris Chart Js -->
+	<script
+		src="#{facesContext.externalContext.request.contextPath}/assets/js/morris/raphael-2.1.0.min.js"></script>
+	<script
+		src="#{facesContext.externalContext.request.contextPath}/assets/js/morris/morris.js"></script>
+	<!-- Custom Js -->
+	<script
+		src="#{facesContext.externalContext.request.contextPath}/assets/js/custom-scripts.js"></script>
+</h:body>
+</html>

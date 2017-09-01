@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.sistemas.com.bo</groupId>
-  <artifactId>Cursos-v1</artifactId>
+  <groupId>org.keije.com</groupId>
+  <artifactId>cursos</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>Cursos-v1</name>
+  <name>cursos</name>
   <url>http://maven.apache.org</url>
 <repositories>
     <repository>
@@ -210,7 +210,7 @@
   
   
   <build>
-    <finalName>Cursos-v1</finalName>
+    <finalName>cursos</finalName>
     
     <plugins>
        <plugin>

@@ -9,6 +9,8 @@ public class Curso implements Serializable{
 	private int id;
 	private String nombre;
 	private String tipo;
+	private String fecha;
+	private String horario;
 	private int duracion;
 	private int cupo;
 	private boolean evaluar;
@@ -29,6 +31,20 @@ public class Curso implements Serializable{
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	public String getFecha() {
+		return fecha;
+	}
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+	
+	public String getHorario() {
+		return horario;
+	}
+	public void setHorario(String horario) {
+		this.horario = horario;
+	}
+	
 	public String getTipo() {
 		return tipo;
 	}
